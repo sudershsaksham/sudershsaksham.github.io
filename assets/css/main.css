@@ -2913,6 +2913,8 @@ input, select, textarea {
 /* Header */
 
 	#header {
+		border: 1px solid rgba(51, 51, 51, 0.5);
+		border-radius: 2px;
 		margin-top: 70px;
 		margin-left: 20px;
 		margin-right: 20px;
@@ -3072,6 +3074,30 @@ input, select, textarea {
 				-ms-transform: translateY(0);
 				transform: translateY(0);
 				opacity: 1;
+			}
+			
+			#header .inner .new {
+				-moz-transition: -moz-transform 1.5s ease, opacity 2s ease;
+				-webkit-transition: -webkit-transform 1.5s ease, opacity 2s ease;
+				-ms-transition: -ms-transform 1.5s ease, opacity 2s ease;
+				transition: transform 1.5s ease, opacity 2s ease;
+				-moz-transition-delay: 0.25s;
+				-webkit-transition-delay: 0.25s;
+				-ms-transition-delay: 0.25s;
+				transition-delay: 0.25s;
+				-moz-transform: scale(1);
+				-webkit-transform: scale(1);
+				-ms-transform: scale(1);
+				transform: scale(1);
+				opacity: 1;
+				position: center;
+				text-align: center;
+				padding: 15px;
+				z-index: 1;
+				border: 2px solid rgba(51, 51, 51, 0.45);
+				border-radius: 2px;
+				margin-left: 750px;
+				margin-right: 750px;
 			}
 
 		#header:after {
