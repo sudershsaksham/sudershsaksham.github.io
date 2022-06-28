@@ -288,7 +288,28 @@ input, select, textarea {
 
 		}
 
-/* Row */
+/* Banner */
+	.banner__content{
+		text-align: left;
+		margin: 0 auto;
+		padding: 20px 20px 20px 20px;
+		font-size: 30px;
+		vertical-align: middle;
+		width: 50%;
+		float: left;
+		background: rgb(224, 224, 224)
+	}
+
+	.banner__menu{
+		align-content: right;
+		text-align: right;
+		float: right;
+		width: 50%;
+		padding: 20px 20px 20px 20px;
+		background: rgb(224, 224, 224)
+	}
+
+	/* Row */
 
 	.row {
 		display: flex;
