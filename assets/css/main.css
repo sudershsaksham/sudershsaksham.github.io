@@ -244,7 +244,7 @@ input, select, textarea {
 	.container {
 		margin: 0 auto;
 		max-width: calc(100% - 4em);
-		width: 60em;
+		width: 70em;
 	}
 
 		.container.xsmall {
@@ -374,7 +374,7 @@ input, select, textarea {
 		}
 
 		.row > .col-6 {
-			width: 50%;
+			width: 100%;
 		}
 
 		.row > .off-6 {
@@ -422,7 +422,7 @@ input, select, textarea {
 		}
 
 		.row > .col-12 {
-			width: 100%;
+			width: 50%;
 		}
 
 		.row > .off-12 {
@@ -1107,7 +1107,7 @@ input, select, textarea {
 				}
 
 				.row > .col-6-medium {
-					width: 50%;
+					width: 70%;
 				}
 
 				.row > .off-6-medium {
@@ -1159,7 +1159,7 @@ input, select, textarea {
 				}
 
 				.row > .off-12-medium {
-					margin-left: 100%;
+					margin-left: 50%;
 				}
 
 				.row.gtr-0 {
@@ -2821,7 +2821,9 @@ input, select, textarea {
 		.main.style1 {
 			background: #fff;
 		}
-
+		.main.style3 {
+			background: rgba(233, 233, 233, 0.671);
+		}
 		.main.style2 {
 			background-color: #333;
 			color: rgba(255, 255, 255, 0.75);
