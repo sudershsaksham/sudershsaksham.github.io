@@ -361,7 +361,7 @@ input, select, textarea {
 		border-style: solid;
 		border-width: 1px;
 		border-color: #333;
-		object-fit: cover;
+		object-fit: contain;
 		background:rgb(255, 255, 255);
 	}
 /* Conclusion */

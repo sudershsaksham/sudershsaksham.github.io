@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Saksham | ASAP Research </title>
+		<title>Saksham | Vancouver ER System </title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -31,18 +31,18 @@
 					<div class="row gtr-150">
 						<div class="col-6 col-12-medium">
 							<header class="major">
-								<h1> ASAP: Stock Market Evidence Regarding Public Policy </h1>
+								<h1> Efficiency of the Vancouver ER System </h1>
 							</header>
 							<!-- Introduction -->
 							<p>
-								In April 2021, The Wall Street Journal published an article titled “The Airline Safety Revolution” (Pasztor, 2021), 
-								crediting the policy of the US Federal Aviation Administration’s Aviation Safety Action Program (ASAP) introduced in 1997 
-								towards a ‘remarkable’ reduction in the rate of fatal accidents. This program encourages voluntary reporting of safety issues for enforcement-related incentives, 
-								and enhances communication between carriers in identifying potential precursors to accidents.
+								 After rushing to the ER on the 26th of June, '22 with an upset stomach and a high fever, I was told to take a seat. This wait extended for 4 hours, watching other
+								 people join me in what was a quickly crowding room, as nurses rushed to handle all of the patients. The waiting time displayed showed other emergency rooms that seemed to have
+								 lower waiting times. This interaction at the ER provided me the basis for this study. 
 							</p>
 							<p>
-								This study examines the financial effect of the ASAP; or if in the aftermath of the ASAP policy, the free market tends to ‘fine’ 
-								the airlines involved in the crash more than before 1997. 
+								 This analysis examines the inefficiencies faced by the Vancouver ER System. As a disclaimer, when in need of an ER, it is imperative that any individual go to one that is closest.
+								 This study only aims to highlight how better to allocate resources, and ER are equipped to prioritise patients on the basis of needs. An implicit assumption of this analysis is that
+								 all patients are dealing with needs that hold the same priority, and that all the hospitals are equally equipped to handle these needs. 
 							</p>
 						</div>
 					</div>
@@ -52,69 +52,34 @@
 		<!-- Meat -->
 			<div class="meat">
 				<div class="meat_inside">
-					To measure the economic impact of an event on a firm, financial market data can be used, assuming the markets are rational and efficient.
-					To find the effect of the ASAP policy, two groups of 15 randomly chosen crashes were created to analyze and conduct an event study.
-					The estimation period for the event study was taken as 120 days before each crash. The event window to analyze abnormal returns is taken to be 10 days, 
-					wherein the day of the crash is taken as <i>t</i>=0. Using data from the estimation window, the Fama-French 3 factor model is used to predict 
-					the values of normal returns, which would be the case if the crash being studied did not happen. To estimate the coefficients, a linear regression was used.
-					For more information regarding the Fama-French 3 factor model, this <i><a href="https://www.investopedia.com/terms/f/famaandfrenchthreefactormodel.asp"> link </a></i> may be useful.
+					The wait times for ERs all over Vancouver are available to the public <i><a href="http://www.edwaittimes.ca/WaitTimes.aspx">here</a></i>. The data is scraped from this site, and using 
+					time taken to travel
+					between the hospitals from Google Distance Matrix API, we can find if it'd be beneficial for the incremental patient to be transferred to a different hospital. Using this idea of 
+					<i>efficient transfers</i>, we can find transfers between which hospitals would be beneficial in reducing overall wait times.
+					<p></p>
+					<p> The following figure shows the efficient transfers in blue. As can be seen, there are a lot of efficient transfers that can take place.</p>					
 					<p></p>
 					<div class="meat_image">
-						<center><img src="images/ASAP/eq1.jpg"></center>
+						<center><img src="images/ER_PROJ/heatmap_eff_transfers.jpeg" style="height: 100%;width: 100%;"></center>
 						<div class="meat_imagecap">
-							Equation 1 - Fama-French 3 Factor Model 
+							Figure 1 - Highlighting Efficient Transfers Between Emergency Rooms on 3rd August, 2022.
 						</div>
 					</div>
 					<p></p>
-					Using the estimated coefficients, we can predict the estimated normal values for each of the stock, and use the actual returns data to find abnormal returns.
-					<p></p>
-					<div class="meat_image">
-						<center><img src="images/ASAP/eq2.jpg"></center>
-						<div class="meat_imagecap">
-							Equation 2 - Abnormal Returns Model
-						</div>
-					</div>
-					<p></p>
-					<div class="meat_image">
-						<img src="images/ASAP/returnsplot.jpeg" style="height: 100%;width: 100%;">
-						<div class="meat_imagecap">
-							Graph 1 - Abnormal Returns for Pre-ASAP and Post-ASAP Crash Groups
-						</div>
-					</div>
-					<p></p>
-					Upon running the regression and finding abnormal returns, the results obtained for the pre-ASAP period show on only slight negative effects of the air disasters. 
-					This is surprising and in direct contention with results of previous papers. For the post-ASAP period, the negative effects are slightly bigger. Both the graphs have negative troughs 
-					at day 3 and day 8,
-					and these negative returns for those days are quickly counteracted by increased buying pressure due to the price drop, further suggesting that the market does not believe the crashes to have any long term
-					effect on the stock price and performance of these companies.
-					<p></p>
-					<p>					
-						We can see this further by analyzing a heatmap of just the actual returns of the stocks. 
-					</p>
-					<p></p>
-					<div class="meat_image">
-						<img src="images/ASAP/heatmap.jpeg" style="height: 100%;width: 100%;">
-						<div class="meat_imagecap">
-							Graph 2 - Heatmap of Actual Returns
-						</div>
-					</div>
-					<p></p>
-					From this heatmap, we can see that the returns in the event period (closer to the top of each column) appear almost as random as the rest of the stock prices. This is in line with the findings
-					here, that the market seems to downplay the effect of the crash and recovers quickly, as also seen in graph 1.
 				</div>
 			</div>
 
 		<!-- Conclusion -->
 		<div class="concl">
 			<div class="concl_text">
-					This is the first study that tackles how the ASAP, and in turn, the use of enforcement-related incentives affects the capital markets and shareholders.
-					However, the inconclusiveness of the test conducted here, especially being in contrast to previous air crash studies, points to areas which should further be explored to understand public perception of policy regarding regulations or the lack thereof. 
-					For a larger study, it could be possible to take into account all the accidents that have happened in the US in the two time periods. With such a sample, 
-					concrete evidence could be produced in support of or against the ASAP. The randomness seen in the returns figure also points to a knowledge gap in what causes changes in the public perception of accidents. 
-					While the number of fatalities seems to be at least somewhat connected, it could also be important to see how shareholders attribute the fault of a disaster to the airlines itself, or another 
-					entity, such as the manufacturer.
+					If all the transfers calculated by the above figure are to be executed, the total reduction in wait times would be about 76 hours. This is an incredibly large number, which only serves to frame 
+					the large impact inefficiency can have. It can also relieve some of the pressure the healthcare system places on the staff at the busiest of these locations. 
 					<p></p>
-					For further information, download the complete paper <i><a href="assets/ASAP-Stock Market Evidence Regarding Public Policy - Saksham Sudershan.docx">here</a></i>. To take a look at the data used as well as the code, visit the GitHub repository <i><a href="https://github.com/sudershsaksham/ASAP_Policy_Stock_Market_Evidence">here</a></i>.
+					Most importantly, this highlights how important it can be to check wait times before heading to an emergency room. While no system for transferring ER patients between hospitals exists, unless
+					required on the basis of medical expertise, individuals in need of an ER who can afford to take themselves to a different ER than the one closest can often find themselves not only
+					helping the stressed healthcare staff and reducing their own wait times, but also the wait times of all Vancouver residents who might be in need.
+					<p></p>
+					To take a look at the data used as well as the code, visit the GitHub repository <i><a href="https://github.com/sudershsaksham/Vancouver-Hospital-Project">here</a></i>.
 			</div>
 		</div>
 
