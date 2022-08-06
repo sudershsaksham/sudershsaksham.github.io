@@ -26,24 +26,24 @@
 			</div>
 
 		<!-- One -->
-			<section id="one" class="main style3">
+			<section id="one" class="main style1">
 				<div class="container">
 					<div class="row gtr-150">
 						<div class="col-6 col-12-medium">
 							<header class="major">
-								<h1> ASAP: Stock Market Evidence Regarding Public Policy </h1>
+								<h1> Changes in Perceptions of E-Cigarette Use of Teenagers </h1>
 							</header>
 							<!-- Introduction -->
 							<p>
-								In April 2021, The Wall Street Journal published an article titled “The Airline Safety Revolution” (Pasztor, 2021), 
-								crediting the policy of the US Federal Aviation Administration’s Aviation Safety Action Program (ASAP) introduced in 1997 
-								towards a ‘remarkable’ reduction in the rate of fatal accidents. This program encourages voluntary reporting of safety issues for enforcement-related incentives, 
-								and enhances communication between carriers in identifying potential precursors to accidents.
+								According to the Centers for Disease Control and Prevention (2021), most e-cigarettes 
+								contain nicotine, which is highly addictive and can harm adolescent brain development.
+								To truly combat the harm that e-cigarettes can cause the youth, I believe it is important to supplement regulations with a 
+								proper understanding of the risks posed to the youth. Targeted education can be a keystone in decreasing e-cigarette use.
 							</p>
-							<p>
-								This study examines the financial effect of the ASAP; or if in the aftermath of the ASAP policy, the free market tends to ‘fine’ 
-								the airlines involved in the crash more than before 1997. 
-							</p>
+							<p><b>
+								This paper tackles the question of how a school’s location in an urban or rural area affects its students’ perception of e-cigarette use in
+								Canada.
+							</b></p>
 						</div>
 					</div>
 				</div>
@@ -52,69 +52,80 @@
 		<!-- Meat -->
 			<div class="meat">
 				<div class="meat_inside">
-					To measure the economic impact of an event on a firm, financial market data can be used, assuming the markets are rational and efficient.
-					To find the effect of the ASAP policy, two groups of 15 randomly chosen crashes were created to analyze and conduct an event study.
-					The estimation period for the event study was taken as 120 days before each crash. The event window to analyze abnormal returns is taken to be 10 days, 
-					wherein the day of the crash is taken as <i>t</i>=0. Using data from the estimation window, the Fama-French 3 factor model is used to predict 
-					the values of normal returns, which would be the case if the crash being studied did not happen. To estimate the coefficients, a linear regression was used.
-					For more information regarding the Fama-French 3 factor model, this <i><a href="https://www.investopedia.com/terms/f/famaandfrenchthreefactormodel.asp"> link </a></i> may be useful.
+					To answer this question, the Canadian Student Tobacco, Alcohol and Drugs Survey 2018/2019 is used. 
+					Measuring risk perception can shed light on future e-cigarette use, as supported by Vogel et al. (2021),
+					according to whom higher risk perceptions are associated with a lower likelihood of e-cigarette use. By taking 
+					into account the student’s current smoking status, their sex at birth, and their grade, we use regression analysis to explore this dataset.
+					<p></p>
+					The secondary data analysis for this study is based on CSTADS 2018/2019, sponsored by Health Canada and conducted by
+					Statistics Canada. The respondents are students in Canadian schools, from grades 7 to 12. The
+					total sample for this survey is 62,850 individuals. As outlined later, the students who responded
+					“I do not know” to the perceived risk of e-cigarette use have been excluded. Further, 79
+					observations were removed due to missing values for whether the school belonged to an urban or
+					rural region, and so the number of samples studied is 55,218.
 					<p></p>
 					<div class="meat_image">
-						<center><img src="images/ASAP/eq1.jpg"></center>
+						<center><img src="images/VAPE_CSTADS/table1.jpg"></center>
 						<div class="meat_imagecap">
-							Equation 1 - Fama-French 3 Factor Model 
+							Table 1 - Summary of Treatment Variable and Covariates
 						</div>
 					</div>
 					<p></p>
-					Using the estimated coefficients, we can predict the estimated normal values for each of the stock, and use the actual returns data to find abnormal returns.
+					The linear regression used to find the causal relationship is given as follows:
 					<p></p>
 					<div class="meat_image">
-						<center><img src="images/ASAP/eq2.jpg"></center>
+						<center><img src="images/VAPE_CSTADS/linreg1.jpg"></center>
 						<div class="meat_imagecap">
-							Equation 2 - Abnormal Returns Model
+							Equation 1 - Linear Regression Model
 						</div>
 					</div>
 					<p></p>
+					These covariates as well as the treatment variable are explained in the following summary table:
+					<p></p>
 					<div class="meat_image">
-						<img src="images/ASAP/returnsplot.jpeg" style="height: 100%;width: 100%;">
+						<img src="images/VAPE_CSTADS/table2.jpg" style="height: 100%;width: 100%;">
 						<div class="meat_imagecap">
-							Graph 1 - Abnormal Returns for Pre-ASAP and Post-ASAP Crash Groups
+							Table 2 - Regression Summary
 						</div>
 					</div>
 					<p></p>
-					Upon running the regression and finding abnormal returns, the results obtained for the pre-ASAP period show on only slight negative effects of the air disasters. 
-					This is surprising and in direct contention with results of previous papers. For the post-ASAP period, the negative effects are slightly bigger. Both the graphs have negative troughs 
-					at day 3 and day 8,
-					and these negative returns for those days are quickly counteracted by increased buying pressure due to the price drop, further suggesting that the market does not believe the crashes to have any long term
-					effect on the stock price and performance of these companies.
+					<b>For ease of interpretation, positive values mean that the factor contributes to a more risky
+					perception of e-cigarette use. With these results, we can see that in both regressions, students
+					attending school in rural areas tend to perceive occasional e-cigarette smoking as less risky
+					compared to those attending school in urban areas. These results are also statistically significant with p-values less than 0.05.</b>
 					<p></p>
 					<p>					
-						We can see this further by analyzing a heatmap of just the actual returns of the stocks. 
+						We can see this more easily in a comparitive graph between urban areas and rural areas as shown below: 
 					</p>
 					<p></p>
 					<div class="meat_image">
-						<img src="images/ASAP/heatmap.jpeg" style="height: 100%;width: 100%;">
+						<img src="images/VAPE_CSTADS/fig1.jpeg" style="height: 100%;width: 100%;">
 						<div class="meat_imagecap">
-							Graph 2 - Heatmap of Actual Returns
+							Figure 1 - E-Cigarette Perception Trends
 						</div>
 					</div>
 					<p></p>
-					From this heatmap, we can see that the returns in the event period (closer to the top of each column) appear almost as random as the rest of the stock prices. This is in line with the findings
-					here, that the market seems to downplay the effect of the crash and recovers quickly, as also seen in graph 1.
+					<b>From this graph, we can see that a higher percentage of students perceive e-cigarette use as less risky in rural areas as compared to urban areas. Also, the perceived risk 
+					tends to reduce as the student’s go to upper classes in their highschools. 
+					</b>
 				</div>
 			</div>
 
 		<!-- Conclusion -->
 		<div class="concl">
 			<div class="concl_text">
-					This is the first study that tackles how the ASAP, and in turn, the use of enforcement-related incentives affects the capital markets and shareholders.
-					However, the inconclusiveness of the test conducted here, especially being in contrast to previous air crash studies, points to areas which should further be explored to understand public perception of policy regarding regulations or the lack thereof. 
-					For a larger study, it could be possible to take into account all the accidents that have happened in the US in the two time periods. With such a sample, 
-					concrete evidence could be produced in support of or against the ASAP. The randomness seen in the returns figure also points to a knowledge gap in what causes changes in the public perception of accidents. 
-					While the number of fatalities seems to be at least somewhat connected, it could also be important to see how shareholders attribute the fault of a disaster to the airlines itself, or another 
-					entity, such as the manufacturer.
-					<p></p>
-					For further information, download the complete paper <i><a href="assets/ASAP-Stock Market Evidence Regarding Public Policy - Saksham Sudershan.docx">here</a></i>. To take a look at the data used as well as the code, visit the GitHub repository <i><a href="https://github.com/sudershsaksham/ASAP_Policy_Stock_Market_Evidence">here</a></i>.
+					The CSTADS is a large cross-sectional survey and using it, we can decisively say that students
+					studying in rural areas have a higher likelihood of e-cigarette use, associated with their lower risk
+					perceptions. With the increasing popularity of e-cigarettes, it is of utmost importance that public
+					health professionals understand where to best allocate resources to have the biggest impact. As
+					such, this study provides a look at tackling this problem. It should be noted that trends among
+					groups should be tracked closely in order to effectively address the rising popularity of
+					e-cigarette use as new regulations continue to be passed.
+					<p></p><b>
+					For further information, download the complete paper <i><a href="assets/Final Report E-cig Perceptions Saksham Sudershan.pdf">here</a></i>. To take a look at the data used as well as the code, visit the GitHub repository <i><a href="https://github.com/sudershsaksham/vaping_perception">here</a></i>.
+					</b>
+					<p></p>-x-<p></p>
+					<i><b><a href="https://sudershsaksham.github.io/portfolio.html">Back to Portfolio</a></b></i>		
 			</div>
 		</div>
 
